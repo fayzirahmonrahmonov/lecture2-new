@@ -97,4 +97,46 @@ foo();
 Additional material:
 
 ![Alt text](image.png)
+
+# Recurrion
+
+- What is Recurrion?
+
+        Recursion is when a function calls itself until someone stops it. If no one stops it then it'll
+        recurse (call itself) forever.
+
+        function recurse() {
+        // function code
+        recurse();
+        // function code
+        }
+        recurse();
+
+  A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.
+
+  Once the condition is met, the function stops calling itself. This is called a base condition.
+
+  To prevent infinite recursion, you can use if...else statement (or similar approach) where one branch makes the recursive call, and the other doesn't.
+
+# Closure
+
+- What is Closure?
+
+        A closure is the combination of a function bundled together which gives you
+        access to an outer function's scope from an inner function
+
+      function greet(name) {
+        function displayName() {
+         console.log('Hi' + ' ' + name);
+      }
+
+      // returning a function
+      return displayName;
+      }
+
+      const g1 = greet('John');
+      console.log(g1); // returns the function definition
+      g1(); // calling the function
+
 # lecture2-new
+
